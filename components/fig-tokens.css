@@ -1,0 +1,12 @@
+/* Generated from Figma Variables. First mode = :root default.
+   FLOAT tokens are unitless — multiply by 1px in calc() where a length is needed. */
+
+:root {
+  --black-100: rgba(12,12,13,0.05); /* @kind color */
+  --black-200: rgba(12,12,13,0.1); /* @kind color */
+  --depth-0: 0; /* @kind shadow */
+  --depth-100: 4; /* @kind shadow */
+  --depth-400: 16; /* @kind shadow */
+  --depth-800: 32; /* @kind shadow */
+  --depth-negative-100: -4; /* @kind shadow */
+}

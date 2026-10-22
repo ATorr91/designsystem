@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Brandbook Deck" description="BluePixel full brand-guidelines slide deck — positioning, archetype, voice, logo, color, type, iconography, Pixelios and applications, in the house style." -->
+<helmet>
+  <script src="./ds-base.js"></script>
+  <style>
+    .bd-stage{background:#c9ccd6;padding:32px 0;display:flex;flex-direction:column;align-items:center;gap:28px;min-height:100vh;box-sizing:border-box}
+    .bd-slide{width:1280px;height:720px;border-radius:24px;overflow:hidden;position:relative;box-shadow:0 24px 60px rgba(30,28,103,.28);flex:none;font-family:var(--bp-font-body)}
+    .bd-eyebrow{text-transform:uppercase;letter-spacing:.2em;font-size:16px;position:absolute;top:56px;left:96px}
+    @media (max-width:1360px){ .bd-slide{transform:scale(.66);margin:-122px 0} }
+  </style>
+  <script type="module">
+    import icons from '../../components/icons/icon-data.js';
+    window.addEventListener('load', () => {
+      const row = document.getElementById('bd-icon-row');
+      if (!row || row.children.length) return;
+      const order = ["SearchFilled","SettingsFilled","NotificationsFilled","HelpOutlineFilled","ShoppingCartFilled","AlertCircle","FeatherPlus","FeatherChevronRight","FeatherArrowLeft","TrashCanOutline","Camera","KeyboardArrowDownFilled"];
+      for (const name of order) {
+        const d = icons[name]; if (!d) continue;
+        const el = document.createElement('div');
+        el.style.cssText = 'width:40px;height:40px;color:#16A1CD';
+        el.innerHTML = `<svg viewBox="${d.viewBox}" fill="none" width="40" height="40">${d.body}</svg>`;
+        row.appendChild(el);
+      }
+    });
+  </script>
+</helmet>
+
+<div class="bd-stage">
+
+  <section class="bd-slide" data-screen-label="Cover" style="background:var(--bp-gradient-cover);color:#fff;display:flex;flex-direction:column;justify-content:center;padding:0 96px;box-sizing:border-box">
+    <div style="display:flex;align-items:center;gap:16px;margin-bottom:40px">
+      <div style="width:40px;height:40px;background:var(--bp-blue)"></div>
+      <img src="../../assets/logo/bluepixel-wordmark.svg" style="height:40px;filter:brightness(0) invert(1)" alt="BluePixel">
+    </div>
+    <div style="font-family:var(--bp-font-title);font-weight:800;font-size:120px;line-height:.98;letter-spacing:-.02em">Blue<br>Brandbook</div>
+    <div style="font-size:19px;color:rgba(255,255,255,.72);margin-top:28px;letter-spacing:.04em">Software that Feels Right · 2026</div>
+  </section>
+
+  <section class="bd-slide" data-screen-label="Index" style="background:var(--bp-surface-alt);color:var(--bp-ink);padding:0 96px;box-sizing:border-box;display:flex;flex-direction:column;justify-content:center">
+    <div class="bd-eyebrow" style="color:var(--bp-ink-soft)">Contents</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px 64px;font-family:var(--bp-font-title);font-size:28px;font-weight:600">
+      <div>01 — Positioning</div><div>07 — Type</div>
+      <div>02 — Archetype</div><div>08 — Iconography</div>
+      <div>03 — Voice &amp; Tone</div><div>09 — Pixelios</div>
+      <div>04 — Values</div><div>10 — Components</div>
+      <div>05 — Logo</div><div>11 — Applications</div>
+      <div>06 — Color</div><div>12 — Contact</div>
+    </div>
+  </section>
+
+  <section class="bd-slide" data-screen-label="Positioning" style="background:var(--bp-navy);color:#fff;padding:0 96px;box-sizing:border-box;display:flex;flex-direction:column;justify-content:center">
+    <div class="bd-eyebrow" style="color:var(--bp-cyan)">01 — Positioning</div>
+    <div style="font-family:var(--bp-font-title);font-weight:800;font-size:56px;line-height:1.08;max-width:920px">We build, evolve, and scale AI-powered digital platforms.</div>
+    <div style="font-size:19px;color:rgba(255,255,255,.75);margin-top:28px;max-width:640px;line-height:1.5">A long-term technology partner for companies investing in digital products, data, and AI — not a vendor for a single release.</div>
+  </section>
+
+  <section class="bd-slide" data-screen-label="Archetype" style="background:#fff;color:var(--bp-ink);padding:0 96px;box-sizing:border-box;display:flex;flex-direction:column;justify-content:center">
+    <div class="bd-eyebrow" style="color:var(--bp-ink-soft)">02 — Brand Archetype</div>
+    <div style="display:flex;gap:64px;align-items:flex-start">
+      <div style="flex:1">
+        <div style="font-family:var(--bp-font-title);font-weight:800;font-size:64px;color:var(--bp-blue)">The Magician</div>
+        <div style="font-size:18px;line-height:1.6;color:var(--bp-ink-soft);margin-top:16px;max-width:460px">BluePixel turns complex, unproven ideas into working digital products — the transformation from "concept" to "concept, then design" to shipped platform. Confidence comes from making change feel inevitable, not risky.</div>
+      </div>
+      <div style="flex:1;border-left:1px solid var(--bp-border);padding-left:64px">
+        <div style="font-family:var(--bp-font-title);font-weight:700;font-size:22px;color:var(--bp-ink)">Secondary: The Sage</div>
+        <div style="font-size:16px;line-height:1.6;color:var(--bp-ink-soft);margin-top:12px">Expertise-led, data-informed, allergic to hype. Claims are specific and earned — "within 24 hours," not "revolutionary."</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bd-slide" data-screen-label="Voice and Tone" style="background:var(--bp-surface-alt);color:var(--bp-ink);padding:0 96px;box-sizing:border-box;display:flex;flex-direction:column;justify-content:center">
+    <div class="bd-eyebrow" style="color:var(--bp-ink-soft)">03 — Voice &amp; Tone</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:8px">
+      <div style="background:#fff;border:1px solid var(--bp-border);border-radius:var(--bp-radius-lg);padding:24px"><div style="font-family:var(--bp-font-title);font-weight:700;font-size:18px;color:var(--bp-blue)">Direct, not jargon-heavy</div><div style="font-size:14px;color:var(--bp-ink-soft);margin-top:8px">"We shipped it in three weeks." Not "We leveraged an agile methodology to deliver synergistic outcomes."</div></div>
+      <div style="background:#fff;border:1px solid var(--bp-border);border-radius:var(--bp-radius-lg);padding:24px"><div style="font-family:var(--bp-font-title);font-weight:700;font-size:18px;color:var(--bp-blue)">Confident, not hyped</div><div style="font-size:14px;color:var(--bp-ink-soft);margin-top:8px">Back claims with a number or timeframe. Skip "revolutionary," "game-changing," "cutting-edge."</div></div>
+      <div style="background:#fff;border:1px solid var(--bp-border);border-radius:var(--bp-radius-lg);padding:24px"><div style="font-family:var(--bp-font-title);font-weight:700;font-size:18px;color:var(--bp-blue)">Human, never corporate</div><div style="font-size:14px;color:var(--bp-ink-soft);margin-top:8px">"We" for BluePixel, "you / your platform" for the client. Contractions are fine. Social copy can be playful and punny in Spanish.</div></div>
+      <div style="background:#fff;border:1px solid var(--bp-border);border-radius:var(--bp-radius-lg);padding:24px"><div style="font-family:var(--bp-font-title);font-weight:700;font-size:18px;color:var(--bp-blue)">Product copy stays clear</div><div style="font-size:14px;color:var(--bp-ink-soft);margin-top:8px">UI microcopy is short and verb-first. In-app empty/error states are helpful, not cute — playfulness lives in the Pixelios, not in error messages.</div></div>
+    </div>
+  </section>
+
+  <section class="bd-slide" data-screen-label="Values" style="background:var(--bp-navy);color:#fff;display:flex;flex-direction:column;justify-content:center;padding:0 96px;box-sizing:border-box">
+    <div class="bd-eyebrow" style="color:var(--bp-cyan)">04 — Our Values</div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
+      <div style="border:1px solid rgba(255,255,255,.18);border-radius:20px;padding:32px;box-sizing:border-box;height:220px;display:flex;flex-direction:column;justify-content:space-between"><div style="width:40px;height:40px;background:var(--bp-cyan)"></div><div style="font-family:var(--bp-font-title);font-weight:500;font-size:26px">We elevate each other</div></div>
+      <div style="border:1px solid rgba(255,255,255,.18);border-radius:20px;padding:32px;box-sizing:border-box;height:220px;display:flex;flex-direction:column;justify-content:space-between"><div style="width:40px;height:40px;background:var(--bp-lime)"></div><div style="font-family:var(--bp-font-title);font-weight:500;font-size:26px">We move faster</div></div>
+      <div style="border:1px solid rgba(255,255,255,.18);border-radius:20px;padding:32px;box-sizing:border-box;height:220px;display:flex;flex-direction:column;justify-content:space-between"><div style="width:40px;height:40px;background:var(--bp-magenta)"></div><div style="font-family:var(--bp-font-title);font-weight:500;font-size:26px">We take ownership</div></div>
+    </div>
+  </section>
+
+  <section class="bd-slide" data-screen-label="Logo" style="background:var(--bp-surface-alt);display:flex;flex-direction:column;justify-content:center;align-items:center;box-sizing:border-box">
+    <div class="bd-eyebrow" style="color:var(--bp-ink-soft);top:56px;left:96px">05 — Logo</div>
+    <div style="display:flex;align-items:center;gap:20px">
+      <div style="width:90px;height:90px;background:var(--bp-blue)"></div>
+      <img src="../../assets/logo/bluepixel-wordmark.svg" style="height:90px" alt="BluePixel">
+    </div>
+    <div style="font-size:18px;color:var(--bp-ink-soft);margin-top:40px;max-width:520px;text-align:center">Built on a pixel structure — the cyan square anchors the wordmark. Keep clear space equal to the square's height on every side; never stretch, recolor, or drop shadow the mark.</div>
+  </section>
+
+  <section class="bd-slide" data-screen-label="Color Primary" style="background:#fff;display:flex;flex-direction:column;box-sizing:border-box">
+    <div class="bd-eyebrow" style="color:var(--bp-ink-soft);position:static;padding:56px 96px 0">06 — Color / Primary</div>
+    <div style="flex:1;display:flex">
+      <div style="flex:1.6;background:var(--bp-blue);color:#fff;display:flex;flex-direction:column;justify-content:flex-end;padding:40px;box-sizing:border-box"><div style="font-family:var(--bp-font-title);font-weight:700;font-size:32px">Pixel Blue</div><div style="opacity:.85;font-size:18px">#16A1CD · Pantone 801 c</div></div>
+      <div style="flex:1;background:var(--bp-cyan);color:#fff;display:flex;flex-direction:column;justify-content:flex-end;padding:32px;box-sizing:border-box"><div style="font-family:var(--bp-font-title);font-weight:700;font-size:22px">Mascot Cyan</div><div style="font-size:14px">#00C1D3</div></div>
+      <div style="flex:1;background:var(--bp-navy);color:#fff;display:flex;flex-direction:column;justify-content:flex-end;padding:32px;box-sizing:border-box"><div style="font-family:var(--bp-font-title);font-weight:700;font-size:22px">Navy</div><div style="font-size:14px">#1E1C67</div></div>
+      <div style="flex:1;background:var(--bp-navy-deep);color:#fff;display:flex;flex-direction:column;justify-content:flex-end;padding:32px;box-sizing:border-box"><div style="font-family:var(--bp-font-title);font-weight:700;font-size:22px">Navy Deep</div><div style="font-size:14px">#12131F</div></div>
+    </div>
+  </section>
+
+  <section class="bd-slide" data-screen-label="Color Secondary" style="background:var(--bp-surface-alt);display:flex;flex-direction:column;box-sizing:border-box">
+    <div class="bd-eyebrow" style="color:var(--bp-ink-soft);position:static;padding:56px 96px 0">06 — Color / Secondary &amp; Neutrals</div>
+    <div style="flex:1;display:flex">
+      <div style="flex:1;background:var(--bp-magenta);color:#fff;display:flex;flex-direction:column;justify-content:flex-end;padding:32px;box-sizing:border-box"><div style="font-family:var(--bp-font-title);font-weight:700;font-size:22px">Magenta</div><div style="font-size:14px">#BE199A</div></div>
+      <div style="flex:1;background:var(--bp-lime);color:var(--bp-ink);display:flex;flex-direction:column;justify-content:flex-end;padding:32px;box-sizing:border-box"><div style="font-family:var(--bp-font-title);font-weight:700;font-size:22px">Lime</div><div style="font-size:14px">#EDF074</div></div>
+      <div style="flex:1;background:var(--bp-green);color:var(--bp-ink);display:flex;flex-direction:column;justify-content:flex-end;padding:32px;box-sizing:border-box"><div style="font-family:var(--bp-font-title);font-weight:700;font-size:22px">Green</div><div style="font-size:14px">#88D465</div></div>
+      <div style="flex:1;background:var(--bp-purple);color:#fff;display:flex;flex-direction:column;justify-content:flex-end;padding:32px;box-sizing:border-box"><div style="font-family:var(--bp-font-title);font-weight:700;font-size:22px">Purple</div><div style="font-size:14px">#7A39CD</div></div>
+      <div style="flex:1;background:var(--bp-ink);color:#fff;display:flex;flex-direction:column;justify-content:flex-end;padding:32px;box-sizing:border-box"><div style="font-family:var(--bp-font-title);font-weight:700;font-size:22px">Ink</div><div style="font-size:14px">#212529</div></div>
+      <div style="flex:1;background:var(--bp-border);color:var(--bp-ink);display:flex;flex-direction:column;justify-content:flex-end;padding:32px;box-sizing:border-box"><div style="font-family:var(--bp-font-title);font-weight:700;font-size:22px">Border</div><div style="font-size:14px">#E4E7EF</div></div>
+    </div>
+  </section>
+
+  <section class="bd-slide" data-screen-label="Type" style="background:var(--bp-surface-alt);color:var(--bp-ink);display:flex;flex-direction:column;justify-content:center;padding:0 96px;box-sizing:border-box">
+    <div class="bd-eyebrow" style="color:var(--bp-ink-soft)">07 — Typography</div>
+    <div style="font-family:var(--bp-font-title);font-weight:700;font-size:84px;line-height:1">Aa Bb Cc Dd Ee</div>
+    <div style="font-size:20px;color:var(--bp-ink-soft);margin-top:8px">Titles — Red Hat Display</div>
+    <div style="font-family:var(--bp-font-body);font-weight:400;font-size:56px;margin-top:44px">Aa Bb Cc Dd Ee</div>
+    <div style="font-size:20px;color:var(--bp-ink-soft);margin-top:8px">Text — Open Sans</div>
+    <div style="font-family:var(--bp-font-display);font-weight:400;font-size:36px;margin-top:36px;color:var(--bp-blue)">HYPE MOMENTS</div>
+    <div style="font-size:16px;color:var(--bp-ink-soft);margin-top:4px">Display accent — Dela Gothic One (stickers, big numbers only)</div>
+  </section>
+
+  <section class="bd-slide" data-screen-label="Iconography" style="background:#fff;color:var(--bp-ink);padding:0 96px;box-sizing:border-box;display:flex;flex-direction:column;justify-content:center">
+    <div class="bd-eyebrow" style="color:var(--bp-ink-soft)">08 — Iconography</div>
+    <div id="bd-icon-row" style="display:flex;gap:28px;margin-top:12px;flex-wrap:wrap"></div>
+    <div style="font-size:16px;color:var(--bp-ink-soft);margin-top:32px;max-width:640px">A 13-glyph UI set — mixed outline and filled shapes, always rendered in <code>currentColor</code>. No emoji, no unicode icons; brand personality lives in the Pixelios, not the UI glyphs.</div>
+  </section>
+
+  <section class="bd-slide" data-screen-label="Pixelios" style="background:var(--bp-gradient-cover);padding:0 96px;box-sizing:border-box;display:flex;align-items:center;justify-content:space-between">
+    <div style="max-width:460px">
+      <div class="bd-eyebrow" style="color:var(--bp-cyan);position:static">09 — Pixelios</div>
+      <div style="font-family:var(--bp-font-title);font-weight:800;font-size:44px;color:#fff;margin-top:16px">Our brand characters</div>
+      <div style="font-size:17px;color:rgba(255,255,255,.75);line-height:1.6;margin-top:16px">The Pixelios are BluePixel's cast — a pixel-square character family, not mascots. They carry warmth into decks, social and onboarding without touching UI copy.</div>
+    </div>
+    <div style="flex:0 0 300px;height:300px;overflow:hidden;display:flex;align-items:center;justify-content:center">
+      <div style="transform:scale(.5);transform-origin:center">
+        <x-import component-from-global-scope="Group43768" from="../../components/pixelios/Components.bundle.js" hint-size="380,380"></x-import>
+      </div>
+    </div>
+  </section>
+
+  <section class="bd-slide" data-screen-label="Components" style="background:var(--bp-surface-alt);color:var(--bp-ink);padding:0 96px;box-sizing:border-box;display:flex;flex-direction:column;justify-content:center">
+    <div class="bd-eyebrow" style="color:var(--bp-ink-soft)">10 — Components</div>
+    <div style="display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap;margin-top:8px">
+      <x-import component-from-global-scope="BluePixelDesignSystem_ced77e.Value" hint-size="260,180" style="width:260px"></x-import>
+      <x-import component-from-global-scope="BluePixelDesignSystem_ced77e.Value" property1="hover" hint-size="260,180" style="width:260px"></x-import>
+      <x-import component-from-global-scope="BluePixelDesignSystem_ced77e.Avatar" hint-size="56,56"></x-import>
+      <x-import component-from-global-scope="BluePixelDesignSystem_ced77e.Badge" hint-size="90,32"></x-import>
+    </div>
+  </section>
+
+  <section class="bd-slide" data-screen-label="Applications" style="background:#fff;color:var(--bp-ink);padding:0 96px;box-sizing:border-box;display:flex;flex-direction:column;justify-content:center">
+    <div class="bd-eyebrow" style="color:var(--bp-ink-soft)">11 — Applications</div>
+    <div style="font-family:var(--bp-font-title);font-weight:700;font-size:32px;margin-top:8px">bluepixel.mx</div>
+    <div style="font-size:16px;color:var(--bp-ink-soft);margin-top:8px;max-width:560px">The marketing site applies the gradient cover, Pixel Blue accents and Pixelios character to a dark hero, then flattens to the light surface for content. See the full recreation in <code>ui_kits/website/</code>.</div>
+  </section>
+
+  <section class="bd-slide" data-screen-label="Contact" style="background:var(--bp-navy);color:#fff;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:0 96px;box-sizing:border-box">
+    <div style="font-family:var(--bp-font-title);font-weight:800;font-size:56px">Let's build something.</div>
+    <div style="font-size:19px;color:rgba(255,255,255,.75);margin-top:16px">bluepixel.mx</div>
+  </section>
+
+</div>
+
+</x-dc>
+</body>
+</html>

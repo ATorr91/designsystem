@@ -1,0 +1,6 @@
+/* BluePixel webfonts — all three are the real brand faces, served from Google Fonts.
+   Red Hat Display → titles/headlines. Open Sans → body/UI. Dela Gothic One → playful display.
+   If you have the licensed .ttf/.woff2 files, replace these @import lines with local @font-face
+   rules pointing at the binaries. */
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Dela+Gothic+One&display=swap');

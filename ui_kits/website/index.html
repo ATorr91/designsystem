@@ -1,0 +1,48 @@
+<!-- @dsCard group="Website" viewport="1440x900" name="BluePixel.mx — Homepage" subtitle="Marketing site: nav, hero, capabilities, service model, work, contact" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="omelette-print-source" content="v1785779194178377 ui_kits/website/index.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BluePixel — Digital Evolution Partner</title>
+<template id="__bundler_thumbnail" data-bg-color="#0B1B33"><svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="80" fill="#0B1B33"/><rect x="30" y="26" width="12" height="12" fill="#16A1CD"/><rect x="44" y="26" width="12" height="12" fill="#16A1CD"/><rect x="58" y="26" width="12" height="12" fill="#16A1CD"/><rect x="44" y="40" width="12" height="12" fill="#16A1CD"/><rect x="72" y="26" width="12" height="12" fill="#8EE000"/><text x="60" y="66" font-size="9" fill="#ffffff" text-anchor="middle" font-family="sans-serif" font-weight="700">BluePixel</text></svg></template>
+<link rel="stylesheet" href="../../styles.css">
+<link rel="stylesheet" href="../../components/pixelios/fig-assets.css">
+<style>
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:var(--bp-font-body);color:var(--bp-ink);background:var(--bp-surface);-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  h1,h2,h3{font-family:var(--bp-font-title);margin:0;line-height:1.03;letter-spacing:-.015em}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 40px}
+  .eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.2em;color:var(--bp-blue);font-weight:700}
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  @media print {
+    * { animation-delay: -99s !important; animation-duration: .001s !important;
+        animation-iteration-count: 1 !important; animation-fill-mode: both !important;
+        animation-play-state: running !important; transition-duration: 0s !important; }
+    header[style*="sticky"], #root header { position: static !important; backdrop-filter: none !important; }
+  }
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<script src="../../components/pixelios/Components.bundle.js"></script>
+
+<script type="text/babel" src="./parts.jsx"></script>
+<script type="text/babel">
+  const { Nav, Hero, Logos, Capabilities, ServiceModel, Work, Contact, Footer } = window.BPSite;
+  ReactDOM.createRoot(document.getElementById('root')).render(
+    <>
+      <Nav/><Hero/><Logos/><Capabilities/><ServiceModel/><Work/><Contact/><Footer/>
+    </>
+  );
+</script>
+</body>
+</html>

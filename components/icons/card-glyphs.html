@@ -1,0 +1,21 @@
+<!-- @dsCard group="Components" viewport="700x150" name="Glyph icons" subtitle="The 13-glyph UI icon set (icon-data.js) · currentColor, any size" -->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css">
+<style>body{margin:0;font-family:var(--bp-font-body);background:#fff;color:var(--bp-ink)}
+  .wrap{display:flex;flex-wrap:wrap;gap:22px;align-items:center;justify-content:center;min-height:150px;padding:18px 28px;box-sizing:border-box}
+  .i{display:flex;flex-direction:column;align-items:center;gap:6px;color:var(--bp-blue)}
+  .i span{font-size:9px;color:var(--bp-ink-soft)}
+  .i svg{width:26px;height:26px}
+</style></head><body>
+  <div id="root" class="wrap"></div>
+  <script type="module">
+    import icons from '../icons/icon-data.js';
+    const order = ["SearchFilled","SettingsFilled","NotificationsFilled","HelpOutlineFilled","ShoppingCartFilled","AlertCircle","FeatherPlus","FeatherChevronRight","FeatherArrowLeft","TrashCanOutline","Camera","KeyboardArrowDownFilled"];
+    const root = document.getElementById('root');
+    for (const name of order) {
+      const d = icons[name]; if (!d) continue;
+      const cell = document.createElement('div'); cell.className = 'i';
+      cell.innerHTML = `<svg viewBox="${d.viewBox}" fill="none">${d.body}</svg><span>${name.replace('Filled','').replace('Feather','')}</span>`;
+      root.appendChild(cell);
+    }
+  </script>
+</body></html>
